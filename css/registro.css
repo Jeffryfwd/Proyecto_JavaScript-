@@ -1,0 +1,113 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+
+}
+.container{
+    width: 100%;
+     background-image: url(https://pablomoratinos.es/wp-content/uploads/2020/01/clean-login-wordpress-1536x1003.jpg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form-contant{
+    width: 100%;
+    max-width: 450px;
+    background-color: transparent;
+    padding: 50px 60px 70px;
+    text-align: center;
+    border-radius: 25px;
+    border: ridge 4px white;
+
+    
+  
+
+
+}
+input::placeholder{
+    color: #ffff;
+}
+.form-contant h1{
+    font-size: 30px;
+    margin-bottom: 60px;
+    color: #ffff;
+    position: relative;
+}
+.form-contant h1::after{
+    content: '';
+    width: 30px;
+    height: 4px;
+    border-radius: 3px;
+    background-color: #04bd7d;
+position: absolute;
+bottom: -12px;
+left: 50%;
+transform: translateX(-50%);
+}
+.input-field {
+    color: #ffff;
+    background-color: #04bd7d;
+    margin: 15px 0;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    transition: max-heitgth 0.5s;
+    overflow: hidden;
+}
+input{
+    width: 100%;
+    background-color: #525252;
+    border: 0;
+    outline: none;
+    padding: 18px 15px;
+    color: #ffff;
+    
+    
+}
+
+
+.form p {
+     color: #ffff;
+     margin-left: 5px;
+     text-align: left;
+     font-size: 13px;
+
+}
+.form p a{
+    color: #04bd7d;
+    margin-left: 5px;
+}
+.btn-field {
+    width: 150%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.btn-field button {
+    margin-top: 20px;
+    flex-basis: 48%;
+    margin-right: 150px;
+    font-size: 16px;
+    background-color: #04bd7d;
+    color: #ffff;
+    height: 40px;
+    border-radius: 10px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: background 1s;
+     
+
+}
+.input-group{
+    height: 250px;
+
+}
+.btn-fiel button.disable{
+    background-color: #eaeaea;
+    color: #2c2f35;
+}               
