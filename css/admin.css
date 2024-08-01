@@ -1,0 +1,70 @@
+body{
+    background-color: teal;
+
+}
+.Gestor_tareas{
+    margin-left: 20px;
+    
+    
+
+    
+    
+    
+}
+#tarealista{
+    position: absolute;
+    left: 100px;
+    font-family:Arial, Helvetica, sans-serif;
+    
+    margin-top: 10px;
+
+    
+
+
+    
+    
+
+}
+h1{
+    display: flex;
+justify-content: center;
+
+    
+    
+}
+.content2{
+    position: absolute;
+    background-image: linear-gradient( gray, white ,gray );
+    height: 100%;
+    left: 700px;
+    width: 400px;
+    margin-top: 118px;
+    border-radius: 20px;
+    box-shadow: 5px 5px ;
+    right: 20px;
+}
+#selec{
+    font-size: 15px;
+    background-color: teal;
+    border-radius: 5px;
+}
+button{
+    background-color: teal;
+    font-size: 15px;
+    border-radius: 5px;
+    
+}
+.contentevent{
+    position: absolute;
+    background-image: linear-gradient(gray, white, gray);
+    height: 100%;
+    margin-left: 200px;
+    top: 125px;
+    border-radius: 20px;
+    box-shadow: 5px 5px ;
+}
+#fecha{
+    background-color: teal;
+    font-size: 15px;
+    border-radius: 5px;
+}

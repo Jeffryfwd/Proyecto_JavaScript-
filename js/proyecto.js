@@ -1,27 +1,24 @@
-//document.getElementById('correoiniciosesion');
-//Obtiene el elemento del DOM con el id correoiniciosesion y lo almacena en la variable correoiniciosesion.
 
-//const contrainiciosesion = document.getElementById('contrainiciosesion');
-//Obtiene el elemento del DOM con el id contrainiciosesion y lo almacena en la variable contrainiciosesion.
-
-//const iniciarSesion = document.getElementById('iniciarSesion');
-//Obtiene el elemento del DOM con el id iniciarSesion (el botón de inicio de sesión) y lo almacena en la variable iniciarSesion.
-
+//obtengo los elementos del html
 const correoiniciosesion = document.getElementById('correoiniciosesion');
 const contrainiciosesion = document.getElementById('contrainiciosesion');
 const iniciarSesion = document.getElementById('iniciarSesion');
 
 
-//Añade un evento click al botón de inicio de sesión (iniciarSesion). Cuando se hace clic en el botón, se ejecuta la función definida.
+
 iniciarSesion.addEventListener('click', function () {
   
-   //Captura de valores ingresados por el usuario
-   //Captura el valor ingresado en el campo de correo electrónico (correoiniciosesion) y lo almacena en la variable correoIngresado. El método trim() elimina los espacios en blanco al principio y al final del valor ingresado.
+  
+    //Capturo los valores ingresados por el usuario, correoIngresado va ontener el valor de correo iniciosesion, ingresado por el usuario
     let correoIngresado = correoiniciosesion.value.trim();
     let contraIngresada = contrainiciosesion.value.trim();
+     // Verificar si los campos están vacíos
+     if (correoIngresado === '' && contraIngresada === '') {
+        alert('Complete todos los espacios');
+        return; //termina la funcion cuando haya un espacio vacio y no se agrega otro correo y contraseña igual 
+    }
 
-    // Obtener la lista de usuarios de localStorage
-    //Obtiene la lista de usuarios almacenados en localStorage bajo la clave usuarios y la convierte de una cadena JSON a un objeto JavaScript utilizando JSON.parse(). Si no hay usuarios almacenados 
+    // Obtenengo la lista de usuarios de localStorage
     let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
 
     // Verificar si las credenciales ingresadas coinciden con algún usuario
@@ -29,14 +26,15 @@ iniciarSesion.addEventListener('click', function () {
     let usuarioEncontrado = usuarios.find(usuario => 
         usuario.correo === correoIngresado && usuario.contraseña === contraIngresada
     );
-
+    
     if (usuarioEncontrado) {
-        console.log('Inicio de sesión exitoso');
         alert('Correo y contraseña correctos');
-        
+       window.location.href='administracion.html'
     } else {
         console.log('Correo o contraseña incorrectos');
-        alert('Correo o contraseña incorrectos');
-        window.location.href = 'administracion.html';
+        
+        
     }
+   
+    
 });
